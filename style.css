@@ -1,0 +1,47 @@
+body{
+
+    font-family: 'Great Vibes', cursive;
+
+    font-family: 'Modak', cursive;
+
+    font-size: 25px;
+
+background: url( https://pngimage.net/wp-content/uploads/2018/06/fondos-para-ni%C3%B1os-png.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+#conteneur {
+    padding: 10px;
+    width: 560px;
+    height: 40%;
+    background-color: #F0FFFF;
+    opacity: 0.7;
+}
+#rails {
+    width: 340px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 20px auto;
+}
+#train {
+    height: 62px;
+    width: 100px;
+    position: relative;
+    left: 0px;
+}
+#btnStopper {
+    padding-top: 15px;
+    margin: 10px auto;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    color: red;
+    text-align:center;
+    font-size: 24px;
+    line-height: 30px;
+}

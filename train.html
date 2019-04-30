@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Train</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Modak" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+
+	<div id="conteneur">
+		<p>
+			<ul>
+				<li>Clique sur le train pour le faire accélérer</li>
+				<li>Clique Stop le plus tard possible </li>
+				<li>mais avant qu'il s'écrase sur le bord</li>
+			</ul>
+		</p>
+		<div id="train"><img src="http://www.watzthis.com/images/train.png"></div>
+
+		<div id="btnStopper">Stopp ! </div>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+
+<script type="text/javascript">
+
+var nonTraction = 200;
+var positionTrain = 0;
+var animation;
+
+
+var vTrain = document.getElementById('train');
+vTrain.addEventListener("click" , accelerer);
+
+
+
+
+var vBtnStop = document.getElementById("btnStopper");
+vBtnStop.addEventListener("click", stopperTrain);
+
+
+
+	function accelerer(){
+
+		if(nonTraction > 10){
+			nonTraction -=10;
+		}
+
+		console.log("Vitesse du train:" + nonTraction);
+
+		clearInterval(animation);
+		animation = setInterval(frame, nonTraction);
+
+
+		function frame(){
+
+			positionTrain += 2;
+			vTrain.style.left = positionTrain + 'px';
+			console.log(positionTrain);
+			testerPosition(positionTrain);
+		}
+	}
+
+	function testerPosition(posActuelle){
+
+		if (posActuelle === 560){
+
+			alert("Boum. Trop tard !");
+			console.log("Trop tard !");
+			clearInterval(animation);
+		}
+	}
+
+
+	function stopperTrain(){
+
+		if(positionTrain < 560){
+
+
+			clearInterval(animation);
+			alert("c'était moins une. Bravo !")
+		}
+	}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
